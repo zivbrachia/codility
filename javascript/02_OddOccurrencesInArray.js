@@ -25,11 +25,14 @@ Complexity:
 expected worst-case time complexity is O(N);
 expected worst-case space complexity is O(1), beyond input storage (not counting the storage required for input arguments).
 */
-let A = [9 ,3 ,9, 3, 9, 7, 9];
+let A = [9 ,9 ,3, 3, 9, 7, 9];
 solution(A);
 
 function solution(A) {
-    // write your code in JavaScript (Node.js 6.4.0)
-
-    return unpaired_element;
+  // write your code in JavaScript (Node.js 6.4.0)
+  let result;
+  for(let i = 0; i < A.length; i++){
+    result = result ^= A[i]; // XOR operator
+  }
+  return result;
 }
